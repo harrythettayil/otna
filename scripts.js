@@ -28,6 +28,14 @@ document.getElementById("year").textContent = new Date().getFullYear();
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.querySelector("form");
     const submitBtn = form.querySelector("input[type='submit']");
+    const menuItems = document.querySelectorAll(".menu-items li a");
+    const menuToggle = document.querySelector(".navbar-container input[type='checkbox']");
+
+    menuItems.forEach(item => {
+        item.addEventListener("click", () => {
+            menuToggle.checked = false;
+        });
+    });
 
     form.addEventListener("submit", function (event) {
         event.preventDefault(); // Prevent default form submission
