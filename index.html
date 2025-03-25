@@ -9,7 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@700..900&family=Raleway&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" type="image/png" href="./assets/images/otna-logo.png">
+    <link rel="icon" type="image/png" href="./assets/images/otna-logo.png" />
     <title>Otna Infotech</title>
     <link rel="stylesheet" href="/styles.css" />
   </head>
@@ -133,11 +133,18 @@
     <section id="contact" class="contact container">
       <h2 class="animated text-center">Lets make something great together!</h2>
       <form
+        id="form"
         class="form d-flex"
-        action="https://formsubmit.co/51860b7353823f23bd4f07dcc5f2d3bf"
+        action="https://api.web3forms.com/submit"
         method="POST"
       >
-      <input type="hidden" name="_subject" value="New Enquiry!">
+        <input
+          type="hidden"
+          name="access_key"
+          value="fbec8652-3fcd-4e65-807c-7819a8bf26f1"
+        />
+        <input type="hidden" name="subject" value="New Enquiry" />
+        <input type="hidden" name="captcha" value="false" />
         <section class="left">
           <div class="input-container">
             <label for="name">Name</label>
@@ -157,11 +164,15 @@
             <label for="message">Message</label>
             <textarea name="message" id="" name="message"></textarea>
             <div class="send-container">
-              <input type="submit" value="Send" onclick="return true" />
+              <button id="submit" class="btn" type="submit">Send</button>
             </div>
           </div>
         </section>
       </form>
+      <div id="popup" class="popup">
+        <p>Message Sent Successfully!</p>
+        <button id="closePopup" class="btn" onclick="closePopup()">OK</button>
+      </div>
     </section>
 
     <footer class="footer">
@@ -178,7 +189,6 @@
           >
         </div>
         <div class="block-2 d-flex">
-          
           <a class="d-flex" href="mailto:infotech.otna@gmail.com"
             ><img
               class="contact-icon"
