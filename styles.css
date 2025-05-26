@@ -48,6 +48,10 @@ a {
   display: flex;
 }
 
+.justify-content-center{
+  justify-content: center;
+}
+
 .text-center {
   text-align: center;
 }
@@ -188,12 +192,6 @@ footer {
   text-align: center;
   background-color: var(--primary-color);
   color: var(--white);
-}
-
-.contact-info {
-  justify-content: space-between;
-  margin-bottom: 32px;
-  flex-direction: column;
 }
 
 .block-1 {
@@ -588,10 +586,6 @@ footer {
     width: auto;
     display: unset;
     margin: unset;
-  }
-
-  .contact-info {
-    flex-direction: row;
   }
 
   .block-1 {
